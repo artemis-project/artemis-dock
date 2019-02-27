@@ -1,4 +1,4 @@
-# Dash to Dock master ja.po
+# Artemis Dock master ja.po
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the dash-to-dock package.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
@@ -62,8 +62,8 @@ msgstr "ウィンドウプレビューの表示"
 #. can also translate the full message if this fits better your language.
 #: appIcons.js:1170
 #, javascript-format
-msgid "Dash to Dock %s"
-msgstr "Dash to Dock の%s"
+msgid "Artemis Dock %s"
+msgstr "Artemis Dock の%s"
 
 #: Settings.ui.h:1
 msgid "Customize indicator style"

@@ -3,7 +3,7 @@
 const Gio = imports.gi.Gio;
 const Signals = imports.signals;
 
-var LauncherEntryRemoteModel = class DashToDock_LauncherEntryRemoteModel {
+var LauncherEntryRemoteModel = class artemisdock_LauncherEntryRemoteModel {
 
     constructor() {
         this._entriesByDBusName = {};
@@ -138,7 +138,7 @@ var LauncherEntryRemoteModel = class DashToDock_LauncherEntryRemoteModel {
 };
 Signals.addSignalMethods(LauncherEntryRemoteModel.prototype);
 
-var LauncherEntryRemote = class DashToDock_LauncherEntryRemote {
+var LauncherEntryRemote = class artemisdock_LauncherEntryRemote {
 
     constructor(dbusName, appId, properties) {
         this._dbusName = dbusName;

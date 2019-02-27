@@ -65,7 +65,7 @@ msgstr "Все окна"
 #. can also translate the full message if this fits better your language.
 #: appIcons.js:1092
 #, javascript-format
-msgid "Dash to Dock %s"
+msgid "Artemis Dock %s"
 msgstr ""
 
 #: Settings.ui.h:1

@@ -44,7 +44,7 @@ const handledWindowTypes = [
  * Intallihide object: emit 'status-changed' signal when the overlap of windows
  * with the provided targetBoxClutter.ActorBox changes;
  */
-var Intellihide = class DashToDock_Intellihide {
+var Intellihide = class artemisdock_Intellihide {
 
     constructor(settings, monitorIndex) {
         // Load settings

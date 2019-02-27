@@ -1,5 +1,5 @@
-# Dash to Dock galician translation.
-# This file is distributed under the same license as the Dash to Dock package.
+# Artemis Dock galician translation.
+# This file is distributed under the same license as the Artemis Dock package.
 # Xosé M. Lamas <correo@xmgz.eu>, 2018.
 #
 msgid ""

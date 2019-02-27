@@ -34,7 +34,7 @@ const MAX_WINDOWS_CLASSES = 4;
  * obtained by composing the desired classes below based on the settings.
  *
  */
-var AppIconIndicator = class DashToDock_AppIconIndicator {
+var AppIconIndicator = class artemisdock_AppIconIndicator {
 
     constructor(source, settings) {
         this._indicators = [];
@@ -111,7 +111,7 @@ var AppIconIndicator = class DashToDock_AppIconIndicator {
 /*
  * Base class to be inherited by all indicators of any kind
 */
-var IndicatorBase = class DashToDock_IndicatorBase {
+var IndicatorBase = class artemisdock_IndicatorBase {
 
     constructor(source, settings) {
         this._settings = settings;
@@ -137,7 +137,7 @@ var IndicatorBase = class DashToDock_IndicatorBase {
  * providing some basic methods, variables definitions and their update,  css style classes handling.
  *
  */
-var RunningIndicatorBase = class DashToDock_RunningIndicatorBase extends IndicatorBase {
+var RunningIndicatorBase = class artemisdock_RunningIndicatorBase extends IndicatorBase {
 
     constructor(source, settings) {
         super(source, settings)
@@ -251,7 +251,7 @@ var RunningIndicatorBase = class DashToDock_RunningIndicatorBase extends Indicat
 
 // We add a css class so third parties themes can limit their indicaor customization
 // to the case we do nothing
-var RunningIndicatorDefault = class DashToDock_RunningIndicatorDefault extends RunningIndicatorBase {
+var RunningIndicatorDefault = class artemisdock_RunningIndicatorDefault extends RunningIndicatorBase {
 
     constructor(source, settings) {
         super(source, settings);
@@ -264,7 +264,7 @@ var RunningIndicatorDefault = class DashToDock_RunningIndicatorDefault extends R
     }
 };
 
-var RunningIndicatorDots = class DashToDock_RunningIndicatorDots extends RunningIndicatorBase {
+var RunningIndicatorDots = class artemisdock_RunningIndicatorDots extends RunningIndicatorBase {
 
     constructor(source, settings) {
         super(source, settings)
@@ -438,7 +438,7 @@ var RunningIndicatorDots = class DashToDock_RunningIndicatorDots extends Running
 
 // Adapted from dash-to-panel by Jason DeRose
 // https://github.com/jderose9/dash-to-panel
-var RunningIndicatorCiliora = class DashToDock_RunningIndicatorCiliora extends RunningIndicatorDots {
+var RunningIndicatorCiliora = class artemisdock_RunningIndicatorCiliora extends RunningIndicatorDots {
 
     _drawIndicator(cr) {
         if (this._isRunning) {
@@ -472,7 +472,7 @@ var RunningIndicatorCiliora = class DashToDock_RunningIndicatorCiliora extends R
 
 // Adapted from dash-to-panel by Jason DeRose
 // https://github.com/jderose9/dash-to-panel
-var RunningIndicatorSegmented = class DashToDock_RunningIndicatorSegmented extends RunningIndicatorDots {
+var RunningIndicatorSegmented = class artemisdock_RunningIndicatorSegmented extends RunningIndicatorDots {
 
     _drawIndicator(cr) {
         if (this._isRunning) {
@@ -504,7 +504,7 @@ var RunningIndicatorSegmented = class DashToDock_RunningIndicatorSegmented exten
 
 // Adapted from dash-to-panel by Jason DeRose
 // https://github.com/jderose9/dash-to-panel
-var RunningIndicatorSolid = class DashToDock_RunningIndicatorSolid extends RunningIndicatorDots {
+var RunningIndicatorSolid = class artemisdock_RunningIndicatorSolid extends RunningIndicatorDots {
 
     _drawIndicator(cr) {
         if (this._isRunning) {
@@ -533,7 +533,7 @@ var RunningIndicatorSolid = class DashToDock_RunningIndicatorSolid extends Runni
 
 // Adapted from dash-to-panel by Jason DeRose
 // https://github.com/jderose9/dash-to-panel
-var RunningIndicatorSquares = class DashToDock_RunningIndicatorSquares extends RunningIndicatorDots {
+var RunningIndicatorSquares = class artemisdock_RunningIndicatorSquares extends RunningIndicatorDots {
 
     _drawIndicator(cr) {
         if (this._isRunning) {
@@ -559,7 +559,7 @@ var RunningIndicatorSquares = class DashToDock_RunningIndicatorSquares extends R
 
 // Adapted from dash-to-panel by Jason DeRose
 // https://github.com/jderose9/dash-to-panel
-var RunningIndicatorDashes = class DashToDock_RunningIndicatorDashes extends RunningIndicatorDots {
+var RunningIndicatorDashes = class artemisdock_RunningIndicatorDashes extends RunningIndicatorDots {
 
     _drawIndicator(cr) {
         if (this._isRunning) {
@@ -587,7 +587,7 @@ var RunningIndicatorDashes = class DashToDock_RunningIndicatorDashes extends Run
 
 // Adapted from dash-to-panel by Jason DeRose
 // https://github.com/jderose9/dash-to-panel
-var RunningIndicatorMetro = class DashToDock_RunningIndicatorMetro extends RunningIndicatorDots {
+var RunningIndicatorMetro = class artemisdock_RunningIndicatorMetro extends RunningIndicatorDots {
 
     constructor(source, settings) {
         super(source, settings);
@@ -643,7 +643,7 @@ var RunningIndicatorMetro = class DashToDock_RunningIndicatorMetro extends Runni
 /*
  * Unity like notification and progress indicators
  */
-var UnityIndicator = class DashToDock_UnityIndicator extends IndicatorBase {
+var UnityIndicator = class artemisdock_UnityIndicator extends IndicatorBase {
 
     constructor(source, settings) {
 
@@ -927,7 +927,7 @@ const DOMINANT_COLOR_ICON_SIZE = 64;
 
 // Compute dominant color frim the app icon.
 // The color is cached for efficiency.
-var DominantColorExtractor = class DashToDock_DominantColorExtractor {
+var DominantColorExtractor = class artemisdock_DominantColorExtractor {
 
     constructor(app) {
         this._app = app;

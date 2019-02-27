@@ -69,8 +69,8 @@ msgstr "Wszystkie okna"
 #. can also translate the full message if this fits better your language.
 #: appIcons.js:1450
 #, javascript-format
-msgid "Dash to Dock %s"
-msgstr "%s Dash to Dock"
+msgid "Artemis Dock %s"
+msgstr "%s Artemis Dock"
 
 #: Settings.ui.h:1
 msgid "Customize indicator style"

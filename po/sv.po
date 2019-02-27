@@ -65,8 +65,8 @@ msgstr "Alla fönster"
 #. can also translate the full message if this fits better your language.
 #: appIcons.js:1069
 #, javascript-format
-msgid "Dash to Dock %s"
-msgstr "%s för Dash to Dock"
+msgid "Artemis Dock %s"
+msgstr "%s för Artemis Dock"
 
 #: Settings.ui.h:1
 msgid ""

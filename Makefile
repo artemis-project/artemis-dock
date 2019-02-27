@@ -1,6 +1,6 @@
 # Basic Makefile
 
-UUID = dash-to-dock@micxgx.gmail.com
+UUID = artemis-project.github.io
 BASE_MODULES = extension.js stylesheet.css metadata.json COPYING README.md
 EXTRA_MODULES = dash.js docking.js appIcons.js appIconIndicators.js launcherAPI.js windowPreview.js intellihide.js prefs.js theming.js utils.js Settings.ui
 EXTRA_MEDIA = logo.svg glossy.svg highlight_stacked_bg.svg highlight_stacked_bg_h.svg
@@ -14,7 +14,7 @@ else
 	SHARE_PREFIX = $(DESTDIR)/usr/share
 	INSTALLBASE = $(SHARE_PREFIX)/gnome-shell/extensions
 endif
-INSTALLNAME = dash-to-dock@micxgx.gmail.com
+INSTALLNAME = artemis-project.github.io
 
 # The command line passed variable VERSION is used to set the version string
 # in the metadata and in the generated zip-file. If no VERSION is passed, the
@@ -37,18 +37,18 @@ extension: ./schemas/gschemas.compiled $(MSGSRC:.po=.mo)
 ./schemas/gschemas.compiled: ./schemas/org.gnome.shell.extensions.dash-to-dock.gschema.xml
 	glib-compile-schemas ./schemas/
 
-potfile: ./po/dashtodock.pot
+potfile: ./po/artemisdock.pot
 
 mergepo: potfile
 	for l in $(MSGSRC); do \
-		msgmerge -U $$l ./po/dashtodock.pot; \
+		msgmerge -U $$l ./po/artemisdock.pot; \
 	done;
 
-./po/dashtodock.pot: $(TOLOCALIZE) Settings.ui
+./po/artemisdock.pot: $(TOLOCALIZE) Settings.ui
 	mkdir -p po
-	xgettext -k --keyword=__ --keyword=N__ --add-comments='Translators:' -o po/dashtodock.pot --package-name "Dash to Dock" $(TOLOCALIZE)
+	xgettext -k --keyword=__ --keyword=N__ --add-comments='Translators:' -o po/artemisdock.pot --package-name "Artemis Dock" $(TOLOCALIZE)
 	intltool-extract --type=gettext/glade Settings.ui
-	xgettext -k --keyword=_ --keyword=N_ --join-existing -o po/dashtodock.pot Settings.ui.h
+	xgettext -k --keyword=_ --keyword=N_ --join-existing -o po/artemisdock.pot Settings.ui.h
 
 ./po/%.mo: ./po/%.po
 	msgfmt -c $< -o $@
@@ -89,6 +89,6 @@ _build: all
 		lf=_build/locale/`basename $$l .mo`; \
 		mkdir -p $$lf; \
 		mkdir -p $$lf/LC_MESSAGES; \
-		cp $$l $$lf/LC_MESSAGES/dashtodock.mo; \
+		cp $$l $$lf/LC_MESSAGES/artemisdock.mo; \
 	done;
 	sed -i 's/"version": -1/"version": "$(VERSION)"/'  _build/metadata.json;

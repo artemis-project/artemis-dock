@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Dash to Dock\n"
+"Project-Id-Version: Artemis Dock\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-28 22:27+0800\n"
 "PO-Revision-Date: 2018-06-28 22:52+0800\n"
@@ -66,7 +66,7 @@ msgstr "所有視窗"
 #. can also translate the full message if this fits better your language.
 #: appIcons.js:1092
 #, javascript-format
-msgid "Dash to Dock %s"
+msgid "Artemis Dock %s"
 msgstr "Dash 至 Dock %s"
 
 #: Settings.ui.h:1

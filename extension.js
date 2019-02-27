@@ -9,7 +9,7 @@ const Docking = Me.imports.docking;
 var dockManager;
 
 function init() {
-    ExtensionUtils.initTranslations('dashtodock');
+    ExtensionUtils.initTranslations('artemisdock');
 }
 
 function enable() {
