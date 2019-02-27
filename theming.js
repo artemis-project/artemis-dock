@@ -39,7 +39,7 @@ const TransparencyMode = {
 /**
  * Manage theme customization and custom theme support
  */
-var ThemeManager = class DashToDock_ThemeManager {
+var ThemeManager = class artemisdock_ThemeManager {
 
     constructor(settings, dock) {
         this._settings = settings;
@@ -181,9 +181,9 @@ var ThemeManager = class DashToDock_ThemeManager {
 
     _updateCustomStyleClasses() {
         if (this._settings.get_boolean('apply-custom-theme'))
-            this._actor.add_style_class_name('dashtodock');
+            this._actor.add_style_class_name('artemisdock');
         else
-            this._actor.remove_style_class_name('dashtodock');
+            this._actor.remove_style_class_name('artemisdock');
 
         if (this._settings.get_boolean('custom-theme-shrink'))
             this._actor.add_style_class_name('shrink');
@@ -325,7 +325,7 @@ var ThemeManager = class DashToDock_ThemeManager {
  * https://git.gnome.org/browse/gnome-shell/commit/?id=447bf55e45b00426ed908b1b1035f472c2466956
  * Transparency when free-floating
  */
-var Transparency = class DashToDock_Transparency {
+var Transparency = class artemisdock_Transparency {
 
     constructor(settings, dock) {
         this._settings = settings;
@@ -539,7 +539,7 @@ var Transparency = class DashToDock_Transparency {
     _getAlphas() {
         // Create dummy object and add to the uiGroup to get it to the stage
         let dummyObject = new St.Bin({
-            name: 'dashtodockContainer',
+            name: 'artemisdockContainer',
         });
         Main.uiGroup.add_child(dummyObject);
 

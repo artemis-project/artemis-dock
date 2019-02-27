@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Dash to Dock\n"
+"Project-Id-Version: Artemis Dock\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-30 18:05+0100\n"
 "PO-Revision-Date: 2015-05-21 21:17+0100\n"
@@ -62,7 +62,7 @@ msgstr "Všechna okna"
 #. can also translate the full message if this fits better your language.
 #: appIcons.js:1170
 #, javascript-format
-msgid "Dash to Dock %s"
+msgid "Artemis Dock %s"
 msgstr ""
 
 #: Settings.ui.h:1

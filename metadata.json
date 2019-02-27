@@ -3,11 +3,11 @@
     "3.31",
     "3.32"
 ],
-"uuid": "dash-to-dock@micxgx.gmail.com",
-"name": "Dash to Dock",
+"uuid": "artemis-project.github.io",
+"name": "Artemis Dock",
 "description": "A dock for the Gnome Shell. This extension moves the dash out of the overview transforming it in a dock for an easier launching of applications and a faster switching between windows and desktops. Side and bottom placement options are available.",
 "original-author": "micxgx@gmail.com",
-"url": "https://micheleg.github.io/dash-to-dock/",
-"gettext-domain": "dashtodock",
+"url": "https://github.com/artemis-project/artemis-dock",
+"gettext-domain": "artemisdock",
 "version": 64
 }

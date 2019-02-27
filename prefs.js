@@ -9,7 +9,7 @@ const Mainloop = imports.mainloop;
 
 // Use __ () and N__() for the extension gettext domain, and reuse
 // the shell domain with the default _() and N_()
-const Gettext = imports.gettext.domain('dashtodock');
+const Gettext = imports.gettext.domain('artemisdock');
 const __ = Gettext.gettext;
 const N__ = function(e) { return e };
 
@@ -81,7 +81,7 @@ function setShortcut(settings) {
     }
 }
 
-var Settings = class DashToDock_Settings {
+var Settings = class artemisdock_Settings {
 
     constructor() {
         this._settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.dash-to-dock');

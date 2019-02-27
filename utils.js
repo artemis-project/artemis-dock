@@ -6,7 +6,7 @@ const St = imports.gi.St;
  * Simplify global signals and function injections handling
  * abstract class
  */
-const BasicHandler = class DashToDock_BasicHandler {
+const BasicHandler = class artemisdock_BasicHandler {
 
     constructor() {
         this._storage = new Object();
@@ -64,7 +64,7 @@ const BasicHandler = class DashToDock_BasicHandler {
 /**
  * Manage global signals
  */
-var GlobalSignalsHandler = class DashToDock_GlobalSignalHandler extends BasicHandler {
+var GlobalSignalsHandler = class artemisdock_GlobalSignalHandler extends BasicHandler {
 
     _create(item) {
         let object = item[0];
@@ -83,7 +83,7 @@ var GlobalSignalsHandler = class DashToDock_GlobalSignalHandler extends BasicHan
 /**
  * Color manipulation utilities
   */
-var ColorUtils = class DashToDock_ColorUtils {
+var ColorUtils = class artemisdock_ColorUtils {
 
     // Darken or brigthen color by a fraction dlum
     // Each rgb value is modified by the same fraction.
@@ -190,7 +190,7 @@ var ColorUtils = class DashToDock_ColorUtils {
  * Manage function injection: both instances and prototype can be overridden
  * and restored
  */
-var InjectionsHandler = class DashToDock_InjectionsHandler extends BasicHandler {
+var InjectionsHandler = class artemisdock_InjectionsHandler extends BasicHandler {
 
     _create(item) {
         let object = item[0];

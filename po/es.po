@@ -1,5 +1,5 @@
-# Dash to Dock spanish translation.
-# This file is distributed under the same license as the Dash to Dock package.
+# Artemis Dock spanish translation.
+# This file is distributed under the same license as the Artemis Dock package.
 # Hugo Olabera <hugolabe@gmail.com>, 2015.
 #
 msgid ""
@@ -65,8 +65,8 @@ msgstr "Todas las ventanas"
 #. can also translate the full message if this fits better your language.
 #: appIcons.js:1092
 #, javascript-format
-msgid "Dash to Dock %s"
-msgstr "%s • Dash to Dock"
+msgid "Artemis Dock %s"
+msgstr "%s • Artemis Dock"
 
 #: Settings.ui.h:1
 msgid ""

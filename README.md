@@ -1,4 +1,4 @@
-# Dash to Dock
+# Artemis Dock
 ![screenshot](https://github.com/micheleg/dash-to-dock/raw/master/media/screenshot.jpg)
 
 ## A dock for the GNOME Shell
@@ -12,7 +12,7 @@ For additional installation instructions and more information visit [https://mic
 
 The extension can be installed directly from source, either for the convenience of using git or to test the latest development version. Clone the desired branch with git
 
-<pre>git clone https://github.com/micheleg/dash-to-dock.git</pre>
+<pre>git clone https://github.com/artemis-project/artemis-dock</pre>
 or download the branch from github. A simple Makefile is included. Then run
 <pre>make
 make install
@@ -24,5 +24,5 @@ to install the extension in your home directory. A Shell reload is required <cod
 Bugs should be reported to the Github bug tracker [https://github.com/micheleg/dash-to-dock/issues](https://github.com/micheleg/dash-to-dock/issues).
 
 ## License
-Dash to Dock Gnome Shell extension is distributed under the terms of the GNU General Public License,
+Artemis Dock Gnome Shell extension is distributed under the terms of the GNU General Public License,
 version 2 or later. See the COPYING file for details.

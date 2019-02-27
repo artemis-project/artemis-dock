@@ -60,7 +60,7 @@ const scrollAction = {
  * side.
 */
 var DashSlideContainer = GObject.registerClass(
-class DashToDock_DashSlideContainer extends St.Widget {
+class artemisdock_DashSlideContainer extends St.Widget {
 
     _init(params) {
         // Default local params
@@ -179,7 +179,7 @@ class DashToDock_DashSlideContainer extends St.Widget {
     }
 });
 
-var DockedDash = class DashToDock {
+var DockedDash = class artemisdock {
 
     constructor(settings, remoteModel, monitorIndex) {
         this._rtl = (Clutter.get_default_text_direction() == Clutter.TextDirection.RTL);
@@ -242,7 +242,7 @@ var DockedDash = class DashToDock {
         let positionStyleClass = ['top', 'right', 'bottom', 'left'];
         // This is the centering actor
         this.actor = new St.Bin({
-            name: 'dashtodockContainer',
+            name: 'artemisdockContainer',
             reactive: false,
             style_class: positionStyleClass[this._position],
             x_align: this._isHorizontal?St.Align.MIDDLE:St.Align.START,
@@ -258,7 +258,7 @@ var DockedDash = class DashToDock {
 
         // This is the actor whose hover status us tracked for autohide
         this._box = new St.BoxLayout({
-            name: 'dashtodockBox',
+            name: 'artemisdockBox',
             reactive: true,
             track_hover: true
         });
@@ -1302,9 +1302,9 @@ Signals.addSignalMethods(DockedDash.prototype);
 /*
  * Handle keybaord shortcuts
  */
-const DashToDock_KeyboardShortcuts_NUM_HOTKEYS = 10;
+const artemisdock_KeyboardShortcuts_NUM_HOTKEYS = 10;
 
-var KeyboardShortcuts = class DashToDock_KeyboardShortcuts {
+var KeyboardShortcuts = class artemisdock_KeyboardShortcuts {
 
     constructor(settings, allDocks){
         this._settings = settings;
@@ -1343,7 +1343,7 @@ var KeyboardShortcuts = class DashToDock_KeyboardShortcuts {
         // Setup keyboard bindings for dash elements
         let keys = ['app-hotkey-', 'app-shift-hotkey-', 'app-ctrl-hotkey-'];
         keys.forEach( function(key) {
-            for (let i = 0; i < DashToDock_KeyboardShortcuts_NUM_HOTKEYS; i++) {
+            for (let i = 0; i < artemisdock_KeyboardShortcuts_NUM_HOTKEYS; i++) {
                 let appNum = i;
                 Main.wm.addKeybinding(key + (i + 1), this._settings,
                                       Meta.KeyBindingFlags.NONE,
@@ -1364,7 +1364,7 @@ var KeyboardShortcuts = class DashToDock_KeyboardShortcuts {
 
         let keys = ['app-hotkey-', 'app-shift-hotkey-', 'app-ctrl-hotkey-'];
         keys.forEach( function(key) {
-            for (let i = 0; i < DashToDock_KeyboardShortcuts_NUM_HOTKEYS; i++)
+            for (let i = 0; i < artemisdock_KeyboardShortcuts_NUM_HOTKEYS; i++)
                 Main.wm.removeKeybinding(key + (i + 1));
         }, this);
 
@@ -1454,7 +1454,7 @@ var KeyboardShortcuts = class DashToDock_KeyboardShortcuts {
  * Note: the future implementaion is not fully contained here. Some bits are around in other methods of other classes.
  * This class just take care of enabling/disabling the option.
  */
-var WorkspaceIsolation = class DashToDock_WorkspaceIsolation {
+var WorkspaceIsolation = class artemisdock_WorkspaceIsolation {
 
     constructor(settings, allDocks) {
 
@@ -1560,7 +1560,7 @@ var WorkspaceIsolation = class DashToDock_WorkspaceIsolation {
 };
 
 
-var DockManager = class DashToDock_DockManager {
+var DockManager = class artemisdock_DockManager {
 
     constructor() {
         this._remoteModel = new LauncherAPI.LauncherEntryRemoteModel();

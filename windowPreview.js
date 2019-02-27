@@ -22,7 +22,7 @@ const Utils = Me.imports.utils;
 const PREVIEW_MAX_WIDTH = 250;
 const PREVIEW_MAX_HEIGHT = 150;
 
-var WindowPreviewMenu = class DashToDock_WindowPreviewMenu extends PopupMenu.PopupMenu {
+var WindowPreviewMenu = class artemisdock_WindowPreviewMenu extends PopupMenu.PopupMenu {
 
     constructor(source, settings) {
         let side = Utils.getPosition(settings);
@@ -86,13 +86,13 @@ var WindowPreviewMenu = class DashToDock_WindowPreviewMenu extends PopupMenu.Pop
     }
 };
 
-var WindowPreviewList = class DashToDock_WindowPreviewList extends PopupMenu.PopupMenuSection {
+var WindowPreviewList = class artemisdock_WindowPreviewList extends PopupMenu.PopupMenuSection {
 
     constructor(source, settings) {
         super();
         this._dtdSettings = settings;
 
-        this.actor = new St.ScrollView({ name: 'dashtodockWindowScrollview',
+        this.actor = new St.ScrollView({ name: 'artemisdockWindowScrollview',
                                                hscrollbar_policy: Gtk.PolicyType.NEVER,
                                                vscrollbar_policy: Gtk.PolicyType.NEVER,
                                                enable_mouse_scrolling: true });
@@ -102,7 +102,7 @@ var WindowPreviewList = class DashToDock_WindowPreviewList extends PopupMenu.Pop
         let position = Utils.getPosition(this._dtdSettings);
         this.isHorizontal = position == St.Side.BOTTOM || position == St.Side.TOP;
         this.box.set_vertical(!this.isHorizontal);
-        this.box.set_name('dashtodockWindowList');
+        this.box.set_name('artemisdockWindowList');
         this.actor.add_actor(this.box);
         this.actor._delegate = this;
 
@@ -313,7 +313,7 @@ var WindowPreviewList = class DashToDock_WindowPreviewList extends PopupMenu.Pop
     }
 };
 
-var WindowPreviewMenuItem = class DashToDock_WindowPreviewMenuItem extends PopupMenu.PopupBaseMenuItem {
+var WindowPreviewMenuItem = class artemisdock_WindowPreviewMenuItem extends PopupMenu.PopupBaseMenuItem {
 
     constructor(window, params) {
         super(params);
@@ -324,7 +324,7 @@ var WindowPreviewMenuItem = class DashToDock_WindowPreviewMenuItem extends Popup
 
         // We don't want this: it adds spacing on the left of the item.
         this.actor.remove_child(this._ornamentLabel);
-        this.actor.add_style_class_name('dashtodock-app-well-preview-menu-item');
+        this.actor.add_style_class_name('artemisdock-app-well-preview-menu-item');
 
         this._cloneBin = new St.Bin();
         this._cloneBin.set_size(PREVIEW_MAX_WIDTH, PREVIEW_MAX_HEIGHT);

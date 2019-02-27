@@ -53,7 +53,7 @@ function extendDashItemContainer(dashItemContainer, settings) {
  * - handle horizontal dash
  */
 var MyDashActor = GObject.registerClass(
-class DashToDock_MyDashActor extends St.Widget {
+class artemisdock_MyDashActor extends St.Widget {
 
     _init(settings) {
         // a prefix is required to avoid conflicting with the parent class variable
@@ -173,7 +173,7 @@ const baseIconSizes = [16, 22, 24, 32, 48, 64, 96, 128];
  * - sync minimization application target position.
  * - keep running apps ordered.
  */
-var MyDash = class DashToDock_MyDash {
+var MyDash = class artemisdock_MyDash {
 
     constructor(settings, remoteModel, monitorIndex) {
         this._dtdSettings = settings;
@@ -202,7 +202,7 @@ var MyDash = class DashToDock_MyDash {
 
         this._container = new MyDashActor(settings);
         this._scrollView = new St.ScrollView({
-            name: 'dashtodockDashScrollview',
+            name: 'artemisdockDashScrollview',
             hscrollbar_policy: Gtk.PolicyType.NEVER,
             vscrollbar_policy: Gtk.PolicyType.NEVER,
             enable_mouse_scrolling: false

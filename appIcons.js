@@ -13,7 +13,7 @@ const Mainloop = imports.mainloop;
 
 // Use __ () and N__() for the extension gettext domain, and reuse
 // the shell domain with the default _() and N_()
-const Gettext = imports.gettext.domain('dashtodock');
+const Gettext = imports.gettext.domain('artemisdock');
 const __ = Gettext.gettext;
 const N__ = function(e) { return e };
 
@@ -74,7 +74,7 @@ let recentlyClickedAppMonitor = -1;
  * - Update minimization animation target
  * - Update menu if open on windows change
  */
-var MyAppIcon = class DashToDock_AppIcon extends AppDisplay.AppIcon {
+var MyAppIcon = class artemisdock_AppIcon extends AppDisplay.AppIcon {
 
     // settings are required inside.
     constructor(settings, remoteModel, app, monitorIndex, iconParams) {
@@ -762,7 +762,7 @@ var MyAppIcon = class DashToDock_AppIcon extends AppDisplay.AppIcon {
  * - Add open windows thumbnails instead of list
  * - update menu when application windows change
  */
-const MyAppIconMenu = class DashToDock_MyAppIconMenu extends AppDisplay.AppIconMenu {
+const MyAppIconMenu = class artemisdock_MyAppIconMenu extends AppDisplay.AppIconMenu {
 
     constructor(source, settings) {
         let side = Utils.getPosition(settings);
@@ -1011,7 +1011,7 @@ function getInterestingWindows(app, settings, monitorIndex) {
  *
  */
 
-var ShowAppsIconWrapper = class DashToDock_ShowAppsIconWrapper {
+var ShowAppsIconWrapper = class artemisdock_ShowAppsIconWrapper {
     constructor(settings) {
         this._dtdSettings = settings;
         this.realShowAppsIcon = new Dash.ShowAppsIcon();
@@ -1083,13 +1083,13 @@ Signals.addSignalMethods(ShowAppsIconWrapper.prototype);
 /**
  * A menu for the showAppsIcon
  */
-var MyShowAppsIconMenu = class DashToDock_MyShowAppsIconMenu extends MyAppIconMenu {
+var MyShowAppsIconMenu = class artemisdock_MyShowAppsIconMenu extends MyAppIconMenu {
     _redisplay() {
         this.removeAll();
 
         /* Translators: %s is "Settings", which is automatically translated. You
            can also translate the full message if this fits better your language. */
-        let name = __('Dash to Dock %s').format(_('Settings'))
+        let name = __('Artemis Dock %s').format(_('Settings'))
         let item = this._appendMenuItem(name);
 
         item.connect('activate', function () {
